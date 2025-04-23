@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import date
 import numpy as np
+import seaborn as sns
 
 data1 = pd.read_csv('data_csv/data1.csv')
 # data2= pd.read_csv('data_csv/data2.csv')
@@ -10,11 +11,11 @@ data1.index = range(1, len(data1) + 1)
 
 dataobject = data1.select_dtypes(include=['object']).columns
 datanumeric = data1.select_dtypes(include=np.number).columns.tolist()
-print("categorical variable")
-print(dataobject)
-print("\n \n")
-print("Numerical Variables: ")
-print(datanumeric)
+# print("categorical variable")
+# print(dataobject)
+# print("\n \n")
+# print("Numerical Variables: ")
+# print(datanumeric)
 
 # Tampilkan 5 baris pertama
 # print(data1.dtypes)
@@ -29,3 +30,15 @@ print(datanumeric)
 
 # print(data1.describe())
 
+# visualisasi data numerik
+
+for col in datanumeric:
+    print(col)
+    print('Skew: ', round(data1[col].skew(),2))
+    plt.figure(figsize=(15,4))
+    plt.subplot(1,2,1)
+    data1[col].hist(grid=False)
+    plt.ylabel('count')
+    plt.subplot(1,2,2)
+    sns.boxplot(x=data1[col])
+    plt.show()
