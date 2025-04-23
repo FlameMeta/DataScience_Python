@@ -45,22 +45,22 @@ for col in datanumeric:
     plt.show()
 
 #visualisasi data numerik 2
-    fig, axes = plt.subplots(3, 2, figsize=(18, 18))
-fig.suptitle('Bar plot for all categorical variables in the dataset')
+#     fig, axes = plt.subplots(3, 2, figsize=(18, 18))
+# fig.suptitle('Bar plot for all categorical variables in the dataset')
 
-sns.countplot(ax=axes[0, 0], x='Fuel_Type', data=data1, color='blue',
-              order=data1['Fuel_Type'].value_counts().index)
-sns.countplot(ax=axes[0, 1], x='Transmission', data=data1, color='blue',
-              order=data1['Transmission'].value_counts().index)
-sns.countplot(ax=axes[1, 0], x='Owner_Type', data=data1, color='blue',
-              order=data1['Owner_Type'].value_counts().index)
-sns.countplot(ax=axes[1, 1], x='Location', data=data1, color='blue',
-              order=data1['Location'].value_counts().index)
-sns.countplot(ax=axes[2, 0], x='Brand', data=data1, color='blue',
-              order=data1['Brand'].head(20).value_counts().index)
-sns.countplot(ax=axes[2, 1], x='Model', data=data1, color='blue',
-              order=data1['Model'].head(20).value_counts().index)
+# sns.countplot(ax=axes[0, 0], x='Fuel_Type', data=data1, color='blue',
+#               order=data1['Fuel_Type'].value_counts().index)
+# sns.countplot(ax=axes[0, 1], x='Transmission', data=data1, color='blue',
+#               order=data1['Transmission'].value_counts().index)
+# sns.countplot(ax=axes[1, 0], x='Owner_Type', data=data1, color='blue',
+#               order=data1['Owner_Type'].value_counts().index)
+# sns.countplot(ax=axes[1, 1], x='Location', data=data1, color='blue',
+#               order=data1['Location'].value_counts().index)
+# sns.countplot(ax=axes[2, 0], x='Brand', data=data1, color='blue',
+#               order=data1['Brand'].head(20).value_counts().index)
+# sns.countplot(ax=axes[2, 1], x='Model', data=data1, color='blue',
+#               order=data1['Model'].head(20).value_counts().index)
 
-axes[1][1].tick_params(labelrotation=45)
-axes[2][0].tick_params(labelrotation=90)
-axes[2][1].tick_params(labelrotation=90)
+# axes[1][1].tick_params(labelrotation=45)
+# axes[2][0].tick_params(labelrotation=90)
+# axes[2][1].tick_params(labelrotation=90)
