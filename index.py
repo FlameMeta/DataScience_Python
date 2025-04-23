@@ -30,8 +30,9 @@ datanumeric = data1.select_dtypes(include=np.number).columns.tolist()
 
 # print(data1.describe())
 
-# visualisasi data numerik
 
+
+# visualisasi data numerik
 for col in datanumeric:
     print(col)
     print('Skew: ', round(data1[col].skew(),2))
@@ -42,3 +43,5 @@ for col in datanumeric:
     plt.subplot(1,2,2)
     sns.boxplot(x=data1[col])
     plt.show()
+
+## visualisasi data numerik2
