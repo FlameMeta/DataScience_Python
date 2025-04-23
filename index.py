@@ -43,5 +43,3 @@ for col in datanumeric:
     plt.subplot(1,2,2)
     sns.boxplot(x=data1[col])
     plt.show()
-
-## visualisasi data numerik2
