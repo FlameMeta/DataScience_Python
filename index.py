@@ -30,8 +30,9 @@ datanumeric = data1.select_dtypes(include=np.number).columns.tolist()
 
 # print(data1.describe())
 
-# visualisasi data numerik
 
+
+# visualisasi data numerik
 for col in datanumeric:
     print(col)
     print('Skew: ', round(data1[col].skew(),2))
@@ -43,7 +44,7 @@ for col in datanumeric:
     sns.boxplot(x=data1[col])
     plt.show()
 
-    #visualisasi data numerik 2
+#visualisasi data numerik 2
     fig, axes = plt.subplots(3, 2, figsize=(18, 18))
 fig.suptitle('Bar plot for all categorical variables in the dataset')
 
