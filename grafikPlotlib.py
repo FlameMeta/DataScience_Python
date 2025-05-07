@@ -19,17 +19,17 @@ plt.show()
 
 
 # Set index ke 'Kabupaten/Kota' untuk mempermudah plot
-# data1.set_index('Kabupaten/Kota', inplace=True)
+data1.set_index('Kabupaten/Kota', inplace=True)
 
 # Ambil hanya kolom-kolom usia
-# umur_cols = [col for col in data1.columns if 'Kelompok Umur' in col]
+umur_cols = [col for col in data1.columns if 'Kelompok Umur' in col]
 
 # Plot
-# data1[umur_cols].plot(kind='line', figsize=(14,7), marker='o')
-# plt.title('Persentase Penduduk Berdasarkan Kelompok Umur di Jawa Barat')
-# plt.xlabel('Kabupaten/Kota')
-# plt.ylabel('Persentase (%)')
-# plt.xticks(rotation=90)
-# plt.legend(title='Kelompok Umur')
-# plt.tight_layout()
-# plt.show()
+data1[umur_cols].plot(kind='line', figsize=(14,7), marker='o')
+plt.title('Persentase Penduduk Berdasarkan Kelompok Umur di Jawa Barat')
+plt.xlabel('Kabupaten/Kota')
+plt.ylabel('Persentase (%)')
+plt.xticks(rotation=90)
+plt.legend(title='Kelompok Umur')
+plt.tight_layout()
+plt.show()
