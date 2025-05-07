@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 
 # Baca file CSV
-data1 = pd.read_csv('data_csv/data1.csv')
+data1 = pd.read_csv('data_csv/2022.csv')
 
 # Plot bar chart untuk Kelompok Umur 15-24
 plt.figure(figsize=(12,6))

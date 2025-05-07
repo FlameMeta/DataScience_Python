@@ -4,7 +4,7 @@ from datetime import date
 import numpy as np
 import seaborn as sns
 
-data1 = pd.read_csv('data_csv/data1.csv')
+data1 = pd.read_csv('data_csv/2020.csv')
 # data2= pd.read_csv('data_csv/data2.csv')
 data1.index = range(1, len(data1) + 1)
 
