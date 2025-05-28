@@ -5,11 +5,11 @@ import numpy as np
 import seaborn as sns
 
 # Baca file CSV
-data1 = pd.read_csv('data_csv/2022.csv')
+data1 = pd.read_csv('data_csv/dataB/2022b.csv')
 
 # Plot bar chart untuk Kelompok Umur 15-24
 plt.figure(figsize=(12,6))
-plt.bar(data1['Kabupaten/Kota'], data1['Kelompok Umur - 15-24'], color='skyblue')
+plt.bar(data1['Wilayah'], data1['Perokok 15-24'], color='skyblue')
 plt.xticks(rotation=90)
 plt.title('Persentase Penduduk Usia 15-24 per Kabupaten/Kota')
 plt.xlabel('Kabupaten/Kota')
